@@ -17,10 +17,10 @@ jobs:
     - name: Verify repository structure
       run: ls -la  # Dosya yapısını kontrol eder
 
-    - name: Set up JDK 17
+    - name: Set up JDK 22
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '22'
         distribution: 'temurin'
         cache: maven
 
