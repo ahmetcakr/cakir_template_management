@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e141773e-5d70-45ad-9bc5-513150291cda" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/TemplateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/dto/DocumentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/dto/TemplateVariableDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/controller/DocumentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/DocumentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/DocumentServiceImpl.java" afterDir="false" />
+    <list default="true" id="e141773e-5d70-45ad-9bc5-513150291cda" name="Changes" comment="Document Service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/config/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,11 +114,20 @@
       <option name="project" value="LOCAL" />
       <updated>1740823760925</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Document Service">
+      <option name="closed" value="true" />
+      <created>1740845830019</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740845830019</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="Document Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Document Service" />
   </component>
 </project>
