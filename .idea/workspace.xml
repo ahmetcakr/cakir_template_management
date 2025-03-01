@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e141773e-5d70-45ad-9bc5-513150291cda" name="Changes" comment="OpenAPI Integration">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/dto/DocumentTestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/service/HttpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/controller/DatasetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/mapper/DatasetEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/mapper/VariableEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/request/DatasetUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/response/DatasetResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/entity/DatasetEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/enums/ApiMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/enums/AuthorizationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/enums/TemplateVariableType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/repository/DatasetRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/DatasetService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/DatasetServiceImpl.java" afterDir="false" />
+    <list default="true" id="e141773e-5d70-45ad-9bc5-513150291cda" name="Changes" comment="Dataset services added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/TemplateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/utils/TemplateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/dto/TemplateVariableDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/dto/TemplateVariableDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/controller/VariableMappingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/controller/VariableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/demo/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/demo/DemoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/mapper/TemplateEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/mapper/TemplateEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/mapper/VariableMappingEntityMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/request/TemplateCreateDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/request/TemplateUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/request/TemplateUpdateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/request/VariableMappingCreateDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/request/VariableMappingUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/request/VariableUpdateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/response/TemplateResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/response/TemplateResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/response/VariableMappingResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/response/VariableResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/entity/TemplateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/entity/TemplateEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/entity/VariableMappingEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/entity/VariableEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/repository/VariableMappingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/repository/VariableRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/VariableMappingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/VariableService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/DocumentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/DocumentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/VariableMappingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/VariableServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,29 +141,22 @@
       <option name="project" value="LOCAL" />
       <updated>1740850302995</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Dataset services added">
+      <option name="closed" value="true" />
+      <created>1740861063638</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740861063638</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="Document Service" />
     <MESSAGE value="OpenAPI Integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="OpenAPI Integration" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/utils/TemplateUtils.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/service/HttpService.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Dataset services added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dataset services added" />
   </component>
 </project>
