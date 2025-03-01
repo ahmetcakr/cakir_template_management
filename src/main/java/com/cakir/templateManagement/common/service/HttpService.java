@@ -17,7 +17,10 @@ public class HttpService {
 
     public Map<String, Object> sendGetRequest(String url, String apiKey, String authorizationType) {
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", authorizationType + " " + apiKey);
+
+        if (authorizationType != null){
+            headers.set("Authorization", authorizationType + " " + apiKey);
+        }
 
         HttpEntity<String> requestEntity = new HttpEntity<>(headers);
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, String.class);
@@ -27,7 +30,10 @@ public class HttpService {
     public Map<String, Object> sendPostRequest(String url, String jsonBody, String apiKey, String authorizationType) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.set("Authorization", authorizationType + " " + apiKey);
+
+        if (authorizationType != null){
+            headers.set("Authorization", authorizationType + " " + apiKey);
+        }
 
         HttpEntity<String> requestEntity = new HttpEntity<>(jsonBody, headers);
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, requestEntity, String.class);

@@ -5,6 +5,7 @@ import com.cakir.templateManagement.common.service.HttpService;
 import com.cakir.templateManagement.dto.response.VariableResponseDTO;
 import com.cakir.templateManagement.entity.DatasetEntity;
 import com.cakir.templateManagement.enums.ApiMethod;
+import com.cakir.templateManagement.enums.AuthorizationType;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
@@ -77,12 +78,12 @@ public class TemplateUtils {
             case GET -> httpService.sendGetRequest(
                     datasetEntity.getApiUrl(),
                     datasetEntity.getApiKey(),
-                    datasetEntity.getApiAuthorizationType().toString());
+                    datasetEntity.getApiAuthorizationType() == AuthorizationType.NONE ? null : datasetEntity.getApiAuthorizationType().toString());
             case POST -> httpService.sendPostRequest(
                     datasetEntity.getApiUrl(),
                     "",
                     datasetEntity.getApiKey(),
-                    datasetEntity.getApiAuthorizationType().toString());
+                    datasetEntity.getApiAuthorizationType() == AuthorizationType.NONE ? null : datasetEntity.getApiAuthorizationType().toString());
             default -> null;
         };
 
