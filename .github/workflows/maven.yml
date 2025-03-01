@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write  # ✅ Sadece gerekli izin verildi (dependency-graph için)
 
     steps:
     - name: Checkout repository
