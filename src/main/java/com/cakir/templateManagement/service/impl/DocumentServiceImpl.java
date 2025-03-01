@@ -1,26 +1,33 @@
 package com.cakir.templateManagement.service.impl;
 
-import com.cakir.templateManagement.common.TemplateUtils;
+import com.cakir.templateManagement.common.utils.TemplateUtils;
 import com.cakir.templateManagement.common.dto.DocumentDTO;
 import com.cakir.templateManagement.common.dto.TemplateVariableDTO;
+import com.cakir.templateManagement.dto.mapper.DatasetEntityMapper;
+import com.cakir.templateManagement.dto.response.DatasetResponseDTO;
 import com.cakir.templateManagement.dto.response.TemplateResponseDTO;
-import com.cakir.templateManagement.dto.response.VariableMappingResponseDTO;
+import com.cakir.templateManagement.dto.response.VariableResponseDTO;
+import com.cakir.templateManagement.enums.TemplateVariableType;
+import com.cakir.templateManagement.service.DatasetService;
 import com.cakir.templateManagement.service.DocumentService;
 import com.cakir.templateManagement.service.TemplateService;
-import com.cakir.templateManagement.service.VariableMappingService;
+import com.cakir.templateManagement.service.VariableService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class DocumentServiceImpl implements DocumentService {
 
     private final TemplateService templateService;
-    private final VariableMappingService variableMappingService;
+    private final VariableService variableService;
     private final TemplateUtils templateUtils;
+    private final DatasetService datasetService;
+    private final DatasetEntityMapper datasetEntityMapper;
 
     @Override
     public DocumentDTO generateDocument(Long templateId) {
@@ -36,9 +43,17 @@ public class DocumentServiceImpl implements DocumentService {
 
         templateVariableDTO.setTemplateContent(template.getContent());
 
-        List<VariableMappingResponseDTO> variablesByTemplateId = variableMappingService.getVariablesByTemplateId(template.getId());
+        List<VariableResponseDTO> variablesByTemplateId = variableService.getVariablesByTemplateId(template.getId());
 
         templateVariableDTO.setVariables(variablesByTemplateId);
+
+        if (template.getVariableType() == TemplateVariableType.URL){
+            DatasetResponseDTO resp = datasetService.getDatasetByTemplateId(templateId).orElse(null);
+
+            if (resp != null) {
+                templateVariableDTO.setDatasetEntity(datasetEntityMapper.toEntity(resp));
+            }
+        }
 
         documentDTO.setName("Document_" + LocalDateTime.now());
         documentDTO.setType("html");
@@ -62,9 +77,17 @@ public class DocumentServiceImpl implements DocumentService {
 
         templateVariableDTO.setTemplateContent(template.getContent());
 
-        List<VariableMappingResponseDTO> variablesByTemplateId = variableMappingService.getVariablesByTemplateId(template.getId());
+        List<VariableResponseDTO> variablesByTemplateId = variableService.getVariablesByTemplateId(template.getId());
 
         templateVariableDTO.setVariables(variablesByTemplateId);
+
+        if (template.getVariableType() == TemplateVariableType.URL){
+            DatasetResponseDTO resp = datasetService.getDatasetByTemplateId(templateId).orElse(null);
+
+            if (resp != null) {
+                templateVariableDTO.setDatasetEntity(datasetEntityMapper.toEntity(resp));
+            }
+        }
 
         documentDTO.setName("Document_" + LocalDateTime.now());
         documentDTO.setType("pdf");

@@ -1,9 +1,9 @@
-package com.cakir.templateManagement.dto.response;
+package com.cakir.templateManagement.dto.request;
 
 import lombok.Data;
 
 @Data
-public class VariableMappingResponseDTO {
+public class VariableUpdateDTO {
     private Long id;
     private String templateVariable;
     private String defaultValue;

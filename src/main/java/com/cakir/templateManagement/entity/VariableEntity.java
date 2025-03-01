@@ -9,10 +9,11 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "variable_mappings")
-public class VariableMappingEntity extends BaseEntity {
+@Table(name = "variables")
+public class VariableEntity extends BaseEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(columnDefinition = "SERIAL")
     private Long id;
     private String templateVariable;
     private String defaultValue;

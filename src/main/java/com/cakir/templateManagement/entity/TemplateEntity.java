@@ -1,5 +1,6 @@
 package com.cakir.templateManagement.entity;
 
+import com.cakir.templateManagement.enums.TemplateVariableType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,7 +13,8 @@ import lombok.*;
 @Table(name = "templates")
 public class TemplateEntity extends BaseEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(columnDefinition = "SERIAL")
     private Long id;
 
     @Column(columnDefinition = "TEXT")
@@ -21,4 +23,7 @@ public class TemplateEntity extends BaseEntity {
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "user_id")
     private UserEntity user;
+
+    @Enumerated(EnumType.STRING)
+    private TemplateVariableType variableType;
 }

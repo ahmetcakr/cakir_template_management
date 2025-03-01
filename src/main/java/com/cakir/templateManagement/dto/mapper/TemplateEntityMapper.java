@@ -1,6 +1,5 @@
 package com.cakir.templateManagement.dto.mapper;
 
-import com.cakir.templateManagement.dto.request.TemplateCreateDTO;
 import com.cakir.templateManagement.dto.request.TemplateUpdateDTO;
 import com.cakir.templateManagement.dto.response.TemplateResponseDTO;
 import com.cakir.templateManagement.entity.TemplateEntity;
@@ -27,24 +26,18 @@ public class TemplateEntityMapper {
         templateEntity.setId(templateUpdateDTO.getId());
         templateEntity.setContent(templateUpdateDTO.getContent());
         userRepository.findById(templateUpdateDTO.getUserId()).ifPresent(templateEntity::setUser);
+        templateEntity.setVariableType(templateUpdateDTO.getVariableType());
 
         return templateEntity;
     }
 
-    public TemplateEntity toEntity(TemplateCreateDTO templateCreateDTO) {
-        TemplateEntity templateEntity = new TemplateEntity();
-        templateEntity.setContent(templateCreateDTO.getContent());
-        userRepository.findById(templateCreateDTO.getUserId()).ifPresent(templateEntity::setUser);
-
-        return templateEntity;
-    }
 
     public TemplateResponseDTO toResponseDTO(TemplateEntity templateEntity) {
         TemplateResponseDTO templateResponseDTO = new TemplateResponseDTO();
         templateResponseDTO.setId(templateEntity.getId() == null ? null : templateEntity.getId());
         templateResponseDTO.setContent(templateEntity.getContent());
         templateResponseDTO.setUserId(templateEntity.getUser().getId());
-
+        templateResponseDTO.setVariableType(templateEntity.getVariableType());
         return templateResponseDTO;
     }
 

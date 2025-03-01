@@ -18,7 +18,8 @@ import java.util.List;
 @Table(name = "_user")
 public class UserEntity implements UserDetails {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(columnDefinition = "SERIAL")
     private Long id;
     private String firstname;
     private String lastname;
