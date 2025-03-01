@@ -25,3 +25,5 @@ replay_pid*
 /src/main/resources/application.properties
 /target/classes/application.properties
 /pom.xml
+/.idea/
+/.mvn/
