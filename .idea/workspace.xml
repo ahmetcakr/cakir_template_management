@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e141773e-5d70-45ad-9bc5-513150291cda" name="Changes" comment="pom.xml">
+    <list default="true" id="e141773e-5d70-45ad-9bc5-513150291cda" name="Changes" comment="auth none">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/service/HttpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/service/HttpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/utils/TemplateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/common/utils/TemplateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/controller/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/controller/DocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/mapper/VariableEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/dto/mapper/VariableEntityMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/DocumentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/DocumentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/DocumentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/DocumentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/VariableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cakir/templateManagement/service/impl/VariableServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740861727290</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="auth none">
+      <option name="closed" value="true" />
+      <created>1740864459992</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740864459992</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -168,6 +185,7 @@
     <MESSAGE value="OpenAPI Integration" />
     <MESSAGE value="Dataset services added" />
     <MESSAGE value="pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom.xml" />
+    <MESSAGE value="auth none" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth none" />
   </component>
 </project>

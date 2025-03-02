@@ -27,14 +27,14 @@ public class VariableServiceImpl implements VariableService {
     @Cacheable(key = "'getAllVariables'", unless = "#result == null")
     public List<VariableResponseDTO> getAllVariables() {
         List<VariableEntity> all = variableRepository.findAll();
-        return variableEntityMapper.toResponseDTOs(all);
+        return variableEntityMapper.entityToResponseDTOs(all);
     }
 
     @Override
     @Cacheable(key = "'getVariablesByTemplateId:' + #templateId", unless = "#result == null")
     public List<VariableResponseDTO> getVariablesByTemplateId(Long templateId) {
         List<VariableEntity> allByTemplateId = variableRepository.findAllByTemplateId(templateId);
-        return variableEntityMapper.toResponseDTOs(allByTemplateId);
+        return variableEntityMapper.entityToResponseDTOs(allByTemplateId);
     }
 
     @Override
